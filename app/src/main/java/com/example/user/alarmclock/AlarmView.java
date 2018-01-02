@@ -117,10 +117,13 @@ public class AlarmView extends LinearLayout {
                 lvAlarmList.setAdapter(adapter);
                 //adapter.add(new AlarmDate(System.currentTimeMillis()));
                 alarmManager = (AlarmManager) getContext().getSystemService(Context.ALARM_SERVICE);
-                alarmManager.setRepeating(AlarmManager.RTC_WAKEUP,
+                /*alarmManager.setRepeating(AlarmManager.RTC_WAKEUP,
                         ad.getTime(), 5*60*1000,
-                        PendingIntent.getBroadcast(getContext(),ad.getId(),new Intent(getContext(),AlarmReceiver.class),0));
+                        PendingIntent.getBroadcast(getContext(),ad.getId(),new Intent(getContext(),AlarmReceiver.class),0));*/
+                alarmManager.set(AlarmManager.RTC_WAKEUP,
+                        ad.getTime(),PendingIntent.getBroadcast(getContext(),ad.getId(),new Intent(getContext(),AlarmReceiver.class),0));
                 saveAlarmList();
+
 
             }
         } ,c.get(Calendar.HOUR_OF_DAY),c.get(Calendar.MINUTE),true).show();
