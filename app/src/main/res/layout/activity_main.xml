@@ -47,14 +47,105 @@
 
                 </com.example.user.alarmclock.AlarmView>
 
-                <LinearLayout
+                <com.example.user.alarmclock.StopWatchView
                     android:id="@+id/tabTimer"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="vertical">
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:id="@+id/timeHour"
+                            android:gravity="center"
+                            android:layout_weight="1"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceLarge"/>
+                        <TextView
+                            android:text=":"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceLarge"/>
+                        <TextView
+                            android:id="@+id/timeMin"
+                            android:gravity="center"
+                            android:layout_weight="1"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceLarge"/>
+                        <TextView
+                            android:text=":"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceLarge"/>
+                        <TextView
+                            android:id="@+id/timeSec"
+                            android:gravity="center"
+                            android:layout_weight="1"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceLarge"/>
+                        <TextView
+                            android:text="."
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceLarge"/>
+                        <TextView
+                            android:id="@+id/timeMSec"
+                            android:gravity="center"
+                            android:layout_weight="1"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceLarge"/>
 
+                    </LinearLayout>
+                    <ListView
+                        android:id="@+id/lvWatchTimeList"
+                        android:layout_width="fill_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1">
 
-                </LinearLayout>
+                    </ListView>
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content">
+                        <Button
+                            android:id="@+id/btnSWStart"
+                            android:text="開始"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"/>
+
+                        <Button
+                            android:id="@+id/btnSWPause"
+                            android:text="暫停"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"/>
+                        <Button
+                            android:id="@+id/btnSWResume"
+                            android:text="繼續"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"/>
+                        <Button
+                            android:id="@+id/btnSWLop"
+                            android:text="計時"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"/>
+                        <Button
+                            android:id="@+id/btnSWReset"
+                            android:text="重置"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"/>
+                    </LinearLayout>
+
+                </com.example.user.alarmclock.StopWatchView>
 
                 <com.example.user.alarmclock.TimerView
                     android:id="@+id/tabStopWatch"
